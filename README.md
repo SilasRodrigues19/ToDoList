@@ -48,7 +48,7 @@
 ## About The Project
 
 [![Preview][product-screenshot]](https://react-to-do-two.vercel.app)
-[![Preview][product-screenshot]](https://react-to-do-two.vercel.app)
+[![Preview][product-screenshot2]](https://react-to-do-two.vercel.app)
 
 This project was bootstrapped to learn about Chakra UI
 
@@ -162,4 +162,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 <br><hr>
-[🔼 Back to top](#React-To-Do)
+[🔼 Back to top](#React-To-do-with-Chakra-UI)
