@@ -108,7 +108,7 @@ const App = () => {
   return (
     <>
       <Flex w='100%' h="100vh">
-        <Flex justify='center' align='center' flexDir='column' w='100%' maxW='70%' m='40px' color='#fff'>
+        <Flex justify='center' align='center' flexDir='column' w='100%' maxW='70%' m='0 auto' color='#fff'>
           <Text fontWeight='700' textAlign='center' mb='10%' fontSize={30}
             sx={{
               '@media screen and (max-width: 500px)': {
