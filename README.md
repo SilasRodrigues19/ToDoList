@@ -49,6 +49,7 @@
 
 [![Preview][product-screenshot]](https://react-to-do-two.vercel.app)
 [![Preview][product-screenshot2]](https://react-to-do-two.vercel.app)
+[![Preview][product-screenshot3]](https://react-to-do-two.vercel.app)
 
 This project was bootstrapped to learn about Chakra UI
 
@@ -110,6 +111,7 @@ Project Link: [https://github.com/SilasRodrigues19/React-To-Do](https://github.c
 [license-url]: https://github.com/SilasRodrigues19/React-To-Do/blob/master/LICENSE
 [product-screenshot]: ./public/preview.png
 [product-screenshot2]: ./public/preview2.png
+[product-screenshot3]: ./public/preview-mobile.png
 [license-url]: https://github.com/SilasRodrigues19/React-To-Do/blob/master/LICENSE
 
 <br>
