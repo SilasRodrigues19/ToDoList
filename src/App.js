@@ -38,7 +38,6 @@ const App = () => {
 
   const addTask = e => {
     e.preventDefault();
-
     if (newTask.length > 0) {
       toast({
         title: 'Success.',
@@ -126,14 +125,22 @@ const App = () => {
               }}
             >
               <Input
-                value={newTask} onChange={e => setNewTask(e.target.value)} focusBorderColor='purple.400' variant='outline' w='50%' placeholder='Task to be done'
+                value={newTask} onChange={e => setNewTask(e.target.value)} css={{
+                  '&:focus::-webkit-input-placeholder': {
+                    marginRight: '30rem',
+                    transition: 'margin-right ease-in-out 2.5s',
+                  },
+                  '::-webkit-input-placeholder': {
+                    transition: 'margin-right ease-in-out 1.5s',
+                  },
+                }} focusBorderColor='purple.400' variant='outline' w='50%' placeholder='Task to be done'
                 sx={{
                   '@media screen and (max-width: 500px)': {
                     w: '60%',
                   },
                 }}
               />
-              <Button onClick={addTask} ml={5} bg='purple.400' _hover={{ bg: 'purple.300' }} _focus={{ boxShadow: 'none' }}><SmallAddIcon w={5} h={5} /></Button>
+              <Button onClick={addTask} ml={5} bgGradient='linear(to-l, #647dee, #7f53ac)' _hover={{ bgGradient: 'linear(to-r, #647dee, #7f53ac)', }} _focus={{ boxShadow: 'none' }}><SmallAddIcon w={5} h={5} /></Button>
             </Flex>
           </form>
           <Tabs mt='2%' w='100%'>
@@ -141,16 +148,16 @@ const App = () => {
               <Tab _focus='none' color='purple.200' _selected={{ color: 'purple.400', borderColor: 'purple.400' }}>Incomplete</Tab>
               <Tab _focus='none' color='purple.200' _selected={{ color: 'purple.400', borderColor: 'purple.400' }}>Completed</Tab>
             </TabList>
-            <TabPanels>
-              <TabPanel maxH='400px' overflowY='scroll'
-                css={{
-                  '&::-webkit-scrollbar': {
-                    width: '4px',
-                  },
-                  '&::-webkit-scrollbar-thumb': {
-                    background: 'rgba(255, 255, 255, 0.16)',
-                  },
-                }}>
+            <TabPanels maxH='400px' overflowY='scroll'
+              css={{
+                '&::-webkit-scrollbar': {
+                  width: '4px',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  background: 'rgba(255, 255, 255, 0.16)',
+                },
+              }}>
+              <TabPanel>
                 {tasks.map((task, index) => (
                   !task.isChecked ? <TaskItem removeTask={removeTask} updateTask={updateTask} key={index} task={task} index={index} /> : null
                 ))}
@@ -170,10 +177,22 @@ const App = () => {
 
 const TaskItem = ({ task, index, updateTask, removeTask }) => {
   return (
-    <Checkbox onChange={e => updateTask(index, e.target.checked)} colorScheme='purple' mb={10} w='100%' flexDir='row' isChecked={task.isChecked}>
+    <Checkbox onChange={e => updateTask(index, e.target.checked)} flexDir='row' colorScheme='purple' mb={10} w='100%' isChecked={task.isChecked}>
       <Flex w='100%' flexDir='row'>
         <Text color='#fff' alignSelf='center'>{task.text}</Text>
-        <IconButton onClick={() => removeTask(index)} bg='purple.600' _hover={{ bg: 'purple.300' }} pos='absolute' right={0} icon={<DeleteIcon />} />
+        <IconButton onClick={() => removeTask(index)} bg='purple.600' bgGradient='linear(to-l, #647dee, #7f53ac)' _hover={{ bgGradient: 'linear(to-r, #647dee, #7f53ac)', }} pos='absolute' right={0} icon={
+          <DeleteIcon
+            sx={{
+              '@media screen and (max-width: 500px)': {
+                h: '14px',
+              },
+            }}
+          />}
+          sx={{
+            '@media screen and (max-width: 500px)': {
+              h: '28px',
+            },
+          }} />
       </Flex>
     </Checkbox>
   )
