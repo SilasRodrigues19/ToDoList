@@ -26,7 +26,7 @@ const App = () => {
     if (tasks) {
       return (tasks = JSON.parse(localStorage.getItem('tasks')))
     }
-    return [];
+    return []
   }
 
   const [newTask, setNewTask] = useState('');
@@ -127,8 +127,8 @@ const App = () => {
               <Input
                 value={newTask} onChange={e => setNewTask(e.target.value)} css={{
                   '&:focus::-webkit-input-placeholder': {
-                    marginRight: '30rem',
-                    transition: 'margin-right ease-in-out 2.5s',
+                    marginRight: '50rem',
+                    transition: 'margin-right ease-in-out 4.5s',
                   },
                   '::-webkit-input-placeholder': {
                     transition: 'margin-right ease-in-out 1.5s',
