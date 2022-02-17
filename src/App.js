@@ -107,18 +107,32 @@ const App = () => {
 
   return (
     <>
-      <Flex w='100%' h="100vh">
-        <Flex justify='center' align='center' flexDir='column' w='100%' maxW='70%' m='0 auto' color='#fff'>
-          <Text fontWeight='700' textAlign='center' mb='10%' fontSize={30}
+      <Flex w="100%" h="100vh">
+        <Flex
+          justify="center"
+          align="center"
+          flexDir="column"
+          w="100%"
+          maxW="70%"
+          m="0 auto"
+          color="#fff"
+        >
+          <Text
+            fontWeight="700"
+            textAlign="center"
+            mb="10%"
+            fontSize={30}
             sx={{
               '@media screen and (max-width: 500px)': {
                 fontSize: '20px',
               },
-            }}>
+            }}
+          >
             What's the Plan for Today?
           </Text>
           <form onSubmit={addTask}>
-            <Flex mt='2%'
+            <Flex
+              mt="2%"
               sx={{
                 '@media screen and (max-width: 500px)': {
                   marginBottom: '30px',
@@ -126,23 +140,50 @@ const App = () => {
               }}
             >
               <Input
-                value={newTask} onChange={e => setNewTask(e.target.value)} focusBorderColor='purple.400' variant='outline' w='50%' placeholder='Task to be done'
+                value={newTask}
+                onChange={(e) => setNewTask(e.target.value)}
+                focusBorderColor="purple.400"
+                variant="outline"
+                w="50%"
+                placeholder="Task to be done"
                 sx={{
                   '@media screen and (max-width: 500px)': {
                     w: '60%',
                   },
                 }}
               />
-              <Button onClick={addTask} ml={5} bg='purple.400' _hover={{ bg: 'purple.300' }} _focus={{ boxShadow: 'none' }}><SmallAddIcon w={5} h={5} /></Button>
+              <Button
+                onClick={addTask}
+                ml={5}
+                bg="purple.400"
+                _hover={{ bg: 'purple.300' }}
+                _focus={{ boxShadow: 'none' }}
+              >
+                <SmallAddIcon w={5} h={5} />
+              </Button>
             </Flex>
           </form>
-          <Tabs mt='2%' w='100%'>
-            <TabList >
-              <Tab _focus='none' color='purple.200' _selected={{ color: 'purple.400', borderColor: 'purple.400' }}>Incomplete</Tab>
-              <Tab _focus='none' color='purple.200' _selected={{ color: 'purple.400', borderColor: 'purple.400' }}>Completed</Tab>
+          <Tabs mt="2%" w="100%">
+            <TabList>
+              <Tab
+                _focus="none"
+                color="purple.200"
+                _selected={{ color: 'purple.400', borderColor: 'purple.400' }}
+              >
+                Incomplete
+              </Tab>
+              <Tab
+                _focus="none"
+                color="purple.200"
+                _selected={{ color: 'purple.400', borderColor: 'purple.400' }}
+              >
+                Completed
+              </Tab>
             </TabList>
             <TabPanels>
-              <TabPanel maxH='400px' overflowY='scroll'
+              <TabPanel
+                maxH="400px"
+                overflowY="scroll"
                 css={{
                   '&::-webkit-scrollbar': {
                     width: '4px',
@@ -150,33 +191,81 @@ const App = () => {
                   '&::-webkit-scrollbar-thumb': {
                     background: 'rgba(255, 255, 255, 0.16)',
                   },
-                }}>
-                {tasks.map((task, index) => (
-                  !task.isChecked ? <TaskItem removeTask={removeTask} updateTask={updateTask} key={index} task={task} index={index} /> : null
-                ))}
+                }}
+              >
+                {tasks.map((task, index) =>
+                  !task.isChecked ? (
+                    <TaskItem
+                      removeTask={removeTask}
+                      updateTask={updateTask}
+                      key={index}
+                      task={task}
+                      index={index}
+                    />
+                  ) : null
+                )}
               </TabPanel>
-              <TabPanel>
-                {tasks.map((task, index) => (
-                  task.isChecked ? <TaskItem removeTask={removeTask} updateTask={updateTask} key={index} task={task} index={index} /> : null
-                ))}
+              <TabPanel
+                maxH="400px"
+                overflowY="scroll"
+                css={{
+                  '&::-webkit-scrollbar': {
+                    width: '4px',
+                  },
+                  '&::-webkit-scrollbar-thumb': {
+                    background: 'rgba(255, 255, 255, 0.16)',
+                  },
+                }}
+              >
+                {tasks.map((task, index) =>
+                  task.isChecked ? (
+                    <TaskItem
+                      removeTask={removeTask}
+                      updateTask={updateTask}
+                      key={index}
+                      task={task}
+                      index={index}
+                    />
+                  ) : null
+                )}
               </TabPanel>
             </TabPanels>
           </Tabs>
         </Flex>
-      </Flex >
+      </Flex>
     </>
-  )
+  );
 }
 
 const TaskItem = ({ task, index, updateTask, removeTask }) => {
   return (
-    <Checkbox onChange={e => updateTask(index, e.target.checked)} colorScheme='purple' mb={10} w='100%' flexDir='row' isChecked={task.isChecked}>
-      <Flex w='100%' flexDir='row'>
-        <Text color='#fff' alignSelf='center'>{task.text}</Text>
-        <IconButton onClick={() => removeTask(index)} bg='purple.600' _hover={{ bg: 'purple.300' }} pos='absolute' right={0} icon={<DeleteIcon />} />
+    <Checkbox
+      onChange={(e) => updateTask(index, e.target.checked)}
+      colorScheme="purple"
+      mb={10}
+      w="100%"
+      flexDir="row"
+      isChecked={task.isChecked}
+    >
+      <Flex w="100%" flexDir="row">
+        <Text color="#fff" alignSelf="center">
+          {task.text}
+        </Text>
+        <IconButton
+          onClick={() => removeTask(index)}
+          bg="purple.600"
+          w={3}
+          h={6}
+          _hover={{ bg: 'purple.300' }}
+          pos="absolute"
+          right={0}
+          icon={<DeleteIcon
+          w={3} h={3}
+          />}
+        />
       </Flex>
     </Checkbox>
-  )
+  );
 }
 
 export default App
