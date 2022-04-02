@@ -11,6 +11,7 @@ import {
   Checkbox,
   IconButton,
   createStandaloneToast,
+  Tooltip,
 } from '@chakra-ui/react';
 
 import { DeleteIcon, SmallAddIcon } from '@chakra-ui/icons';
@@ -152,15 +153,17 @@ const App = () => {
                   },
                 }}
               />
-              <Button
-                onClick={addTask}
-                ml={5}
-                bg="purple.400"
-                _hover={{ bg: 'purple.300' }}
-                _focus={{ boxShadow: 'none' }}
-              >
-                <SmallAddIcon w={5} h={5} />
-              </Button>
+              <Tooltip label="Add Task" fontSize="sm" bg="purple.300">
+                <Button
+                  onClick={addTask}
+                  ml={5}
+                  bg="purple.400"
+                  _hover={{ bg: 'purple.300' }}
+                  _focus={{ boxShadow: 'none' }}
+                >
+                  <SmallAddIcon w={5} h={5} />
+                </Button>
+              </Tooltip>
             </Flex>
           </form>
           <Tabs mt="2%" w="100%">
@@ -251,18 +254,18 @@ const TaskItem = ({ task, index, updateTask, removeTask }) => {
         <Text color="#fff" alignSelf="center">
           {task.text}
         </Text>
-        <IconButton
-          onClick={() => removeTask(index)}
-          bg="purple.600"
-          w={3}
-          h={6}
-          _hover={{ bg: 'purple.300' }}
-          pos="absolute"
-          right={0}
-          icon={<DeleteIcon
-          w={3} h={3}
-          />}
-        />
+        <Tooltip label="Remove Task" fontSize="sm" bg="purple.300">
+          <IconButton
+            onClick={() => removeTask(index)}
+            bg="purple.400"
+            w={3}
+            h={6}
+            _hover={{ bg: 'purple.300' }}
+            pos="absolute"
+            right={0}
+            icon={<DeleteIcon w={3} h={3} />}
+          />
+        </Tooltip>
       </Flex>
     </Checkbox>
   );
