@@ -259,7 +259,12 @@ const TaskItem = ({ task, index, updateTask, removeTask }) => {
             onClick={() => removeTask(index)}
             bg="purple.400"
             w={3}
-            h={6}
+            h={8}
+            sx={{
+              '@media screen and (max-width: 500px)': {
+                h: '1.5rem',
+              },
+            }}
             _hover={{ bg: 'purple.300' }}
             pos="absolute"
             right={0}
