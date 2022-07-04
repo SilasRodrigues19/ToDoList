@@ -12,6 +12,7 @@ import {
   IconButton,
   createStandaloneToast,
   Tooltip,
+  useToast,
 } from '@chakra-ui/react';
 
 import { DeleteIcon, SmallAddIcon } from '@chakra-ui/icons';
@@ -21,7 +22,8 @@ import { useState, useEffect } from 'react';
 const toast = createStandaloneToast()
 
 const App = () => {
-
+  const current = useToast();
+  const id = "test-toast";
   const getLocalStorage = () => {
     let tasks = localStorage.getItem('tasks');
     if (tasks) {
@@ -56,14 +58,16 @@ const App = () => {
       setNewTask('')
       return;
     }
-    toast({
-      title: 'Error.',
-      description: 'Task cannot be empty.',
-      status: 'warning',
-      duration: 3000,
-      isClosable: true,
-      position: 'top-right',
-    })
+    if (!current.isActive(id))
+      toast({
+        id,
+        title: 'Error.',
+        description: 'Task cannot be empty.',
+        status: 'warning',
+        duration: 3000,
+        isClosable: true,
+        position: 'top-right',
+      })
   }
 
   const updateTask = (index, checked) => {
