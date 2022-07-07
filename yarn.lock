@@ -1790,9 +1790,9 @@
     "@motionone/utils" "^10.9.0"
     tslib "^2.3.1"
 
-"@motionone/dom@^10.11.0":
-  version "10.11.0"
-  resolved "https://registry.yarnpkg.com/@motionone/dom/-/dom-10.11.0.tgz#dc2e46b0e21044cc9ae89a994cd6725eac09e48b"
+"@motionone/dom@^10.11.1":
+  version "10.11.2"
+  resolved "https://registry.yarnpkg.com/@motionone/dom/-/dom-10.11.2.tgz#a5256e372a04593ba62949e00708173639496db2"
   dependencies:
     "@motionone/animation" "^10.10.1"
     "@motionone/generators" "^10.9.0"
@@ -4454,10 +4454,10 @@ fraction.js@^4.1.2:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.1.2.tgz"
 
 framer-motion@6:
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-6.4.1.tgz#d351a96d80bea5736af4175e6307bc63bb4daed1"
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-6.4.2.tgz#664a68a33633906cd2e6ec5ab6665753e46e0e19"
   dependencies:
-    "@motionone/dom" "^10.11.0"
+    "@motionone/dom" "^10.11.1"
     framesync "6.0.1"
     hey-listen "^1.0.8"
     popmotion "11.0.3"
