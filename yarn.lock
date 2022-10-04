@@ -1090,17 +1090,17 @@
   dependencies:
     "@chakra-ui/utils" "1.10.4"
 
-"@chakra-ui/icon@3.0.10":
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-3.0.10.tgz#1a11b5edb42a8af7aa5b6dec2bf2c6c4df1869fc"
+"@chakra-ui/icon@3.0.11":
+  version "3.0.11"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-3.0.11.tgz#a51dda24bed2f2ed77b4136ada8f22d3249c9870"
   dependencies:
-    "@chakra-ui/shared-utils" "2.0.1"
+    "@chakra-ui/shared-utils" "2.0.2"
 
-"@chakra-ui/icons@^2.0.10":
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-2.0.10.tgz#61aeb44c913c10e7ff77addc798494e50d66c760"
+"@chakra-ui/icons@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-2.0.11.tgz#3faf53c499c7c61c65b6e5ff4b0933f48b9ba416"
   dependencies:
-    "@chakra-ui/icon" "3.0.10"
+    "@chakra-ui/icon" "3.0.11"
 
 "@chakra-ui/image@1.1.10":
   version "1.1.10"
@@ -1308,9 +1308,9 @@
     "@chakra-ui/form-control" "1.6.0"
     "@chakra-ui/utils" "1.10.4"
 
-"@chakra-ui/shared-utils@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/shared-utils/-/shared-utils-2.0.1.tgz#41e314e42c96039e8ffb265e73145cf755813ab4"
+"@chakra-ui/shared-utils@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/shared-utils/-/shared-utils-2.0.2.tgz#1df08133194c12ac4df9302604ec37784c2bb026"
 
 "@chakra-ui/skeleton@1.2.14":
   version "1.2.14"
