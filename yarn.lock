@@ -1231,26 +1231,17 @@
     compute-scroll-into-view "1.0.14"
     copy-to-clipboard "3.3.1"
 
-"@chakra-ui/icon@2.0.5":
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/@chakra-ui/icon/-/icon-2.0.5.tgz"
-  integrity sha512-ZrqRvCCIxGr4qFd/r1pmtd9tobRmv8KAxV7ygFoc/t4vOSKTcVIjhE12gsI3FzgvXM15ZFVwsxa1zodwgo5neQ==
+"@chakra-ui/icon@3.0.12":
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-3.0.12.tgz#04f5b38591c4ff1cc922c14f814ce6b5d67525d9"
   dependencies:
-    "@chakra-ui/utils" "1.10.4"
+    "@chakra-ui/shared-utils" "2.0.3"
 
-"@chakra-ui/icon@3.0.11":
-  version "3.0.11"
-  resolved "https://registry.npmjs.org/@chakra-ui/icon/-/icon-3.0.11.tgz"
-  integrity sha512-RG4jf/XmBdaxOYI5J5QstEtTCPoVlmrQ/XiWhvN0LTgAnmZIqVwFl3Uw+satArdStHAs0GmJZg/E/soFTWuFmw==
+"@chakra-ui/icons@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-2.0.12.tgz#5b4dd53512c2543c0617d4b348bf7bd1d9284e4a"
   dependencies:
-    "@chakra-ui/shared-utils" "2.0.2"
-
-"@chakra-ui/icons@^2.0.11":
-  version "2.0.11"
-  resolved "https://registry.npmjs.org/@chakra-ui/icons/-/icons-2.0.11.tgz"
-  integrity sha512-WjxrFMt9hHpuZlnBh4fhtGOkIVlwYwHNmwq4sJGxYWlg8UnEhVJMoOojheJDy/d3Gp9+ApetlK3vt8fV/rZamg==
-  dependencies:
-    "@chakra-ui/icon" "3.0.11"
+    "@chakra-ui/icon" "3.0.12"
 
 "@chakra-ui/image@1.1.10":
   version "1.1.10"
@@ -1521,9 +1512,98 @@
   resolved "https://registry.npmjs.org/@chakra-ui/stat/-/stat-1.2.7.tgz"
   integrity sha512-m76jumFW1N+mCG4ytrUz9Mh09nZtS4OQcADEvOslfdI5StwwuzasTA1tueaelPzdhBioMwFUWL05Fr1fXbPJ/Q==
   dependencies:
-    "@chakra-ui/icon" "2.0.5"
-    "@chakra-ui/utils" "1.10.4"
-    "@chakra-ui/visually-hidden" "1.1.6"
+    "@chakra-ui/utils" "2.0.12"
+
+"@chakra-ui/react@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-2.4.1.tgz#3f3db03e3aa7bcb0bee76427824b3437a9509166"
+  dependencies:
+    "@chakra-ui/accordion" "2.1.3"
+    "@chakra-ui/alert" "2.0.12"
+    "@chakra-ui/avatar" "2.2.1"
+    "@chakra-ui/breadcrumb" "2.1.1"
+    "@chakra-ui/button" "2.0.12"
+    "@chakra-ui/card" "2.1.1"
+    "@chakra-ui/checkbox" "2.2.4"
+    "@chakra-ui/close-button" "2.0.12"
+    "@chakra-ui/control-box" "2.0.11"
+    "@chakra-ui/counter" "2.0.11"
+    "@chakra-ui/css-reset" "2.0.10"
+    "@chakra-ui/editable" "2.0.15"
+    "@chakra-ui/form-control" "2.0.12"
+    "@chakra-ui/hooks" "2.1.2"
+    "@chakra-ui/icon" "3.0.12"
+    "@chakra-ui/image" "2.0.12"
+    "@chakra-ui/input" "2.0.13"
+    "@chakra-ui/layout" "2.1.10"
+    "@chakra-ui/live-region" "2.0.11"
+    "@chakra-ui/media-query" "3.2.8"
+    "@chakra-ui/menu" "2.1.4"
+    "@chakra-ui/modal" "2.2.3"
+    "@chakra-ui/number-input" "2.0.13"
+    "@chakra-ui/pin-input" "2.0.16"
+    "@chakra-ui/popover" "2.1.3"
+    "@chakra-ui/popper" "3.0.9"
+    "@chakra-ui/portal" "2.0.11"
+    "@chakra-ui/progress" "2.1.1"
+    "@chakra-ui/provider" "2.0.23"
+    "@chakra-ui/radio" "2.0.13"
+    "@chakra-ui/react-env" "2.0.11"
+    "@chakra-ui/select" "2.0.13"
+    "@chakra-ui/skeleton" "2.0.18"
+    "@chakra-ui/slider" "2.0.13"
+    "@chakra-ui/spinner" "2.0.11"
+    "@chakra-ui/stat" "2.0.12"
+    "@chakra-ui/styled-system" "2.3.5"
+    "@chakra-ui/switch" "2.0.16"
+    "@chakra-ui/system" "2.3.3"
+    "@chakra-ui/table" "2.0.12"
+    "@chakra-ui/tabs" "2.1.5"
+    "@chakra-ui/tag" "2.0.12"
+    "@chakra-ui/textarea" "2.0.13"
+    "@chakra-ui/theme" "2.2.1"
+    "@chakra-ui/theme-utils" "2.0.4"
+    "@chakra-ui/toast" "4.0.3"
+    "@chakra-ui/tooltip" "2.2.1"
+    "@chakra-ui/transition" "2.0.12"
+    "@chakra-ui/utils" "2.0.12"
+    "@chakra-ui/visually-hidden" "2.0.13"
+
+"@chakra-ui/select@2.0.13":
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/select/-/select-2.0.13.tgz#60a7302f44e49fc22d251bbcdbae24ec64f5cc4c"
+  dependencies:
+    "@chakra-ui/form-control" "2.0.12"
+
+"@chakra-ui/shared-utils@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/shared-utils/-/shared-utils-2.0.3.tgz#97cbc11282e381ebd9f581c603088f9d60ead451"
+
+"@chakra-ui/skeleton@2.0.18":
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/skeleton/-/skeleton-2.0.18.tgz#a2af241f0b1b692db4d10b90a887107a5e401c7d"
+  dependencies:
+    "@chakra-ui/media-query" "3.2.8"
+    "@chakra-ui/react-use-previous" "2.0.3"
+
+"@chakra-ui/slider@2.0.13":
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/slider/-/slider-2.0.13.tgz#5c64bb8346f5310688845fa72363b1a35bc1560b"
+  dependencies:
+    "@chakra-ui/number-utils" "2.0.5"
+    "@chakra-ui/react-context" "2.0.5"
+    "@chakra-ui/react-types" "2.0.4"
+    "@chakra-ui/react-use-callback-ref" "2.0.5"
+    "@chakra-ui/react-use-controllable-state" "2.0.6"
+    "@chakra-ui/react-use-latest-ref" "2.0.3"
+    "@chakra-ui/react-use-merge-refs" "2.0.5"
+    "@chakra-ui/react-use-pan-event" "2.0.6"
+    "@chakra-ui/react-use-size" "2.0.5"
+    "@chakra-ui/react-use-update-effect" "2.0.5"
+
+"@chakra-ui/spinner@2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/spinner/-/spinner-2.0.11.tgz#a5dd76b6cb0f3524d9b90b73fa4acfb6adc69f33"
 
 "@chakra-ui/styled-system@1.19.0":
   version "1.19.0"
